@@ -1,11 +1,11 @@
 
 import tkinter as tk
-from tkinter import messagebox
+from tkinter import RIDGE, TOP, Frame, Label, messagebox
 
 # Creating the main window
 root = tk.Tk()
 root.title("BoozeCAFE lOGIN FORM")
-root.geometry("600x600")
+root.geometry("400x400")
 
 # Function to authenticate the user
 def authenticate_user():
@@ -35,6 +35,8 @@ password_entry.grid(row=1, column=1)
 # Creating the login button
 login_button = tk.Button(root, text="Login", command=authenticate_user)
 login_button.grid(row=2, column=1)
+
+
 
 # Running the main loop
 root.mainloop()

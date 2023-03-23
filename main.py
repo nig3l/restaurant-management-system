@@ -281,16 +281,16 @@ def receipt():
             textReceipt.insert(END, f'Vanilla:\t\t\t{int(e_vanilla.get()) * 550}\n\n')
 
         textReceipt.insert(END,'***************************************************************\n')
-        if costoffoodvar.get()!='0 Rs':
-            textReceipt.insert(END,f'Cost Of Food\t\t\t{priceofFood}Rs\n\n')
-        if costofdrinksvar.get() != '0 Rs':
-            textReceipt.insert(END,f'Cost Of Drinks\t\t\t{priceofDrinks}Rs\n\n')
-        if costofcakesvar.get() != '0 Rs':
-            textReceipt.insert(END,f'Cost Of Cakes\t\t\t{priceofCakes}Rs\n\n')
+        if costoffoodvar.get()!='0 Ksh':
+            textReceipt.insert(END,f'Cost Of Food\t\t\t{priceofFood}Ksh\n\n')
+        if costofdrinksvar.get() != '0 Ksh':
+            textReceipt.insert(END,f'Cost Of Drinks\t\t\t{priceofDrinks}Ksh\n\n')
+        if costofcakesvar.get() != '0 Ksh':
+            textReceipt.insert(END,f'Cost Of Cakes\t\t\t{priceofCakes}ksh\n\n')
 
-        textReceipt.insert(END, f'Sub Total\t\t\t{subtotalofItems}Rs\n\n')
-        textReceipt.insert(END, f'Service Tax\t\t\t{50}Rs\n\n')
-        textReceipt.insert(END, f'Total Cost\t\t\t{subtotalofItems+50}Rs\n\n')
+        textReceipt.insert(END, f'Sub Total\t\t\t{subtotalofItems}Ksh\n\n')
+        textReceipt.insert(END, f'Service Tax\t\t\t{50}Ksh\n\n')
+        textReceipt.insert(END, f'Total Cost\t\t\t{subtotalofItems+50}Ksh\n\n')
         textReceipt.insert(END,'***************************************************************\n')
 
     else:
@@ -346,17 +346,17 @@ def totalcost():
         priceofCakes=(item19*400)+(item20*300)+ (item21 * 500) + (item22 * 550) + (item23 * 450) + (item24 * 800) \
                      + (item25 * 620) + (item26 * 700) + (item27 * 550)
 
-        costoffoodvar.set(str(priceofFood)+ ' Rs')
-        costofdrinksvar.set(str(priceofDrinks)+ ' Rs')
-        costofcakesvar.set(str(priceofCakes)+ ' Rs')
+        costoffoodvar.set(str(priceofFood)+ ' Ksh')
+        costofdrinksvar.set(str(priceofDrinks)+ ' Ksh')
+        costofcakesvar.set(str(priceofCakes)+ ' ksh')
 
         subtotalofItems=priceofFood+priceofDrinks+priceofCakes
-        subtotalvar.set(str(subtotalofItems)+' Rs')
+        subtotalvar.set(str(subtotalofItems)+' Ksh')
 
-        servicetaxvar.set('50 Rs')
+        servicetaxvar.set('50 Ksh')
 
         tottalcost=subtotalofItems+50
-        totalcostvar.set(str(tottalcost)+' Rs')
+        totalcostvar.set(str(tottalcost)+' Ksh')
 
     else:
         messagebox.showerror('Error','No Item Is selected')
@@ -639,14 +639,14 @@ root.geometry('1270x690+0+0')
 
 root.resizable(0,0)
 
-root.title('Restaurant Management System created by Faizan Khan')
+root.title('Restaurant Management System created by Nigel Marungu')
 
 root.config(bg='firebrick4')
 
 topFrame=Frame(root,bd=10,relief=RIDGE,bg='firebrick4')
 topFrame.pack(side=TOP)
 
-labelTitle=Label(topFrame,text='Restaurant Management System',font=('arial',30,'bold'),fg='yellow',bd=9,
+labelTitle=Label(topFrame,text='BoozeCafe Restaurant Management System',font=('arial',30,'bold'),fg='yellow',bd=9,
                  bg='red4',width=51)
 labelTitle.grid(row=0,column=0)
 
