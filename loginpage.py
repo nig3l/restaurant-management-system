@@ -14,7 +14,7 @@ def authenticate_user():
     password = password_entry.get()
     
     # Check if the username and password are correct
-    if username == "admin" and password == "admin123":
+    if username == "adminBooze" and password == "admin123":
         messagebox.showinfo("Login Successful", "Welcome, " + username + "!")
     else:
         messagebox.showerror("Login Error", "Invalid username or password")
@@ -35,6 +35,9 @@ password_entry.grid(row=1, column=1)
 # Creating the login button
 login_button = tk.Button(root, text="Login", command=authenticate_user)
 login_button.grid(row=2, column=1)
+
+#frames
+root.config(bg="firebrick")
 
 
 
